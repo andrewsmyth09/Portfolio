@@ -1,8 +1,6 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-import '../styles/global.css';
 
 const pageTitle = "About Me";
 const identity = {
@@ -43,10 +41,7 @@ const textCase = 'upperCase';
     </style>
   </head>
   <body>
-    <Header />
-
-    <h1>My Astro Site</h1>
-    <h1>{pageTitle}</h1>
+    <BaseLayout pageTitle={pageTitle}>
     <h2>... and my new Astro site!</h2>
 
     <p>
@@ -88,10 +83,6 @@ const textCase = 'upperCase';
         <p>My goal is not 3 days.</p>
       )
     }
-
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
+    </BaseLayout>
   </body>
 </html>
